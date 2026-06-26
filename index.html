@@ -315,7 +315,7 @@
       <!-- Speaker 1 -->
       <div class="reveal" style="margin-top:24px;display:flex;gap:16px;align-items:flex-start;background:#FFFFFF;border:1px solid rgba(122,92,58,0.12);border-radius:20px;padding:18px;">
         <div style="flex:none;position:relative;width:96px;height:120px;border-radius:14px;overflow:hidden;border:2px solid #1FB2A6;">
-          <img src="project/assets/speaker-lee.jpg" alt="이상우 세무사" style="position:absolute;left:50%;top:50%;max-width:none;background:#F4EFE8;width:126.72px;height:158.4px;transform:translate(calc(-50% + 0px), calc(-50% + 8px));">
+          <img src="project/assets/speaker-lee.jpg" alt="이상우 세무사" style="position:absolute;left:50%;top:50%;max-width:none;background:#F4EFE8;width:126.72px;height:158.4px;transform:translate(calc(-50% + 0px), calc(-50% + 8px));filter:url(#sharpen) contrast(1.05);">
         </div>
         <div style="flex:1;min-width:0;">
           <div style="display:inline-flex;font-size:11px;font-weight:800;letter-spacing:1px;color:#0E8C82;background:#DDF4F1;padding:4px 9px;border-radius:6px;">PART 1 · 자기주식 절세</div>
@@ -327,7 +327,7 @@
       <!-- Speaker 2 -->
       <div class="reveal" data-delay="120" style="margin-top:14px;display:flex;gap:16px;align-items:flex-start;background:#FFFFFF;border:1px solid rgba(122,92,58,0.12);border-radius:20px;padding:18px;">
         <div style="flex:none;position:relative;width:96px;height:120px;border-radius:14px;overflow:hidden;border:2px solid #F2A03C;">
-          <img src="project/assets/speaker-baek.jpg" alt="백근창 세무사" style="position:absolute;left:50%;top:50%;max-width:none;background:#F4EFE8;width:163.2px;height:204px;transform:translate(calc(-50% + 0px), calc(-50% + 20px));">
+          <img src="project/assets/speaker-baek.jpg" alt="백근창 세무사" style="position:absolute;left:50%;top:50%;max-width:none;background:#F4EFE8;width:163.2px;height:204px;transform:translate(calc(-50% + 0px), calc(-50% + 20px));filter:url(#sharpen) contrast(1.05);">
         </div>
         <div style="flex:1;min-width:0;">
           <div style="display:inline-flex;font-size:11px;font-weight:800;letter-spacing:1px;color:#B26C12;background:#FDEEDA;padding:4px 9px;border-radius:6px;">PART 2 · 가업승계</div>
@@ -428,6 +428,15 @@
     </div>
 
   </div>
+
+  <!-- 사진 선명화 필터 -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="sharpen" x="0" y="0" width="100%" height="100%" color-interpolation-filters="linearRGB">
+        <feConvolveMatrix order="3" kernelMatrix="0 -0.7 0  -0.7 3.8 -0.7  0 -0.7 0" preserveAlpha="true"/>
+      </filter>
+    </defs>
+  </svg>
 
   <!-- 스크롤 reveal -->
   <script>
