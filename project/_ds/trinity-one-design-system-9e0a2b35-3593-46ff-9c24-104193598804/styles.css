@@ -1,0 +1,14 @@
+/* ============================================================
+   TRINITY ONE Design System — global entry point
+   Built on Apple's iOS / iPadOS 26 ("Liquid Glass") foundations,
+   re-skinned with the TRINITY ONE brand (brown accent, Pretendard).
+   Consumers link ONLY this file. Import order matters:
+   raw iOS tokens first, then brand overrides, then semantics.
+   ============================================================ */
+
+@import "./tokens/figma/fig-tokens.css";  /* iOS 26 Figma Variables (light/dark/IC modes) */
+@import "./tokens/fonts.css";             /* Pretendard @font-face */
+@import "./tokens/typography.css";        /* type scale */
+@import "./tokens/elevation.css";         /* radii, spacing, shadows, materials */
+@import "./tokens/brand.css";             /* TRINITY brand layer (accent override) */
+@import "./tokens/semantic.css";          /* friendly aliases — reference these */

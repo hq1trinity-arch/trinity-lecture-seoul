@@ -1,0 +1,54 @@
+/* ============================================================
+   TRINITY ONE — Typography scale
+   iOS / iPadOS 26 Dynamic Type (Large content size), rendered in
+   Pretendard. Each style ships size + line-height + weight + tracking.
+   Use the semantic aliases (--text-*) in components.
+   ============================================================ */
+
+:root {
+  --font-system: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-rounded: "Pretendard", ui-rounded, "SF Pro Rounded", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", monospace;
+
+  /* iOS weight ramp */
+  --w-regular: 400; /* @kind other */
+  --w-medium: 500; /* @kind other */
+  --w-semibold: 600; /* @kind other */
+  --w-bold: 700; /* @kind other */
+  --w-heavy: 800; /* @kind other */
+
+  /* --- Type scale: size / line-height --- */
+  --text-large-title-size: 34px;   --text-large-title-line: 41px;
+  --text-title1-size: 28px;        --text-title1-line: 34px;
+  --text-title2-size: 22px;        --text-title2-line: 28px;
+  --text-title3-size: 20px;        --text-title3-line: 25px;
+  --text-headline-size: 17px;      --text-headline-line: 22px;
+  --text-body-size: 17px;          --text-body-line: 22px;
+  --text-callout-size: 16px;       --text-callout-line: 21px;
+  --text-subhead-size: 15px;       --text-subhead-line: 20px;
+  --text-footnote-size: 13px;      --text-footnote-line: 18px;
+  --text-caption1-size: 12px;      --text-caption1-line: 16px;
+  --text-caption2-size: 11px;      --text-caption2-line: 13px;
+
+  /* Tracking (iOS optical letter-spacing at these sizes) */
+  --tracking-large-title: 0.37px;
+  --tracking-title1: 0.36px;
+  --tracking-body: -0.43px;
+  --tracking-headline: -0.43px;
+  --tracking-subhead: -0.24px;
+  --tracking-footnote: -0.08px;
+  --tracking-caption: 0px;
+}
+
+/* Convenience composite text styles ------------------------------- */
+.t-large-title { font: var(--w-bold) var(--text-large-title-size)/var(--text-large-title-line) var(--font-system); letter-spacing: var(--tracking-large-title); }
+.t-title1      { font: var(--w-bold) var(--text-title1-size)/var(--text-title1-line) var(--font-system); letter-spacing: var(--tracking-title1); }
+.t-title2      { font: var(--w-bold) var(--text-title2-size)/var(--text-title2-line) var(--font-system); }
+.t-title3      { font: var(--w-semibold) var(--text-title3-size)/var(--text-title3-line) var(--font-system); }
+.t-headline    { font: var(--w-semibold) var(--text-headline-size)/var(--text-headline-line) var(--font-system); letter-spacing: var(--tracking-headline); }
+.t-body        { font: var(--w-regular) var(--text-body-size)/var(--text-body-line) var(--font-system); letter-spacing: var(--tracking-body); }
+.t-callout     { font: var(--w-regular) var(--text-callout-size)/var(--text-callout-line) var(--font-system); }
+.t-subhead     { font: var(--w-regular) var(--text-subhead-size)/var(--text-subhead-line) var(--font-system); letter-spacing: var(--tracking-subhead); }
+.t-footnote    { font: var(--w-regular) var(--text-footnote-size)/var(--text-footnote-line) var(--font-system); letter-spacing: var(--tracking-footnote); }
+.t-caption1    { font: var(--w-regular) var(--text-caption1-size)/var(--text-caption1-line) var(--font-system); }
+.t-caption2    { font: var(--w-regular) var(--text-caption2-size)/var(--text-caption2-line) var(--font-system); }

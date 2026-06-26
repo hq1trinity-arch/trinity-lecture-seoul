@@ -1,0 +1,76 @@
+/* ============================================================
+   TRINITY ONE — Elevation, radii, spacing, materials
+   Corner radii, shadows and Liquid-Glass material recipes derived
+   from the iOS / iPadOS 26 kit. Materials are approximated with
+   backdrop-filter (real Liquid Glass is a render-time effect).
+   ============================================================ */
+
+:root {
+  /* --- Corner radii (iOS continuous-ish; values from kit) --- */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;     /* standard control / cell */
+  --radius-lg: 14px;     /* grouped list container   */
+  --radius-xl: 20px;     /* cards, popovers          */
+  --radius-2xl: 26px;    /* large cards              */
+  --radius-sheet-top: 34px;     /* --sheet-iphone-top-radius   */
+  --radius-sheet-bottom: 58px;  /* --sheet-iphone-bottom-radius */
+  --radius-sheet-ipad: 38px;
+  --radius-capsule: 999px;
+
+  /* --- Spacing (4pt grid; iOS layout margins) --- */
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;   /* default content margin */
+  --space-6: 20px;   /* grouped list margin    */
+  --space-7: 24px;
+  --space-8: 32px;
+  --space-9: 44px;   /* minimum hit target     */
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-popover: 0 10px 40px rgba(0,0,0,0.18);
+  --shadow-sheet: 0 -2px 16px rgba(0,0,0,0.10);
+  /* Liquid Glass layered shadow (from kit: layer 40 / bg 80 blur) */
+  --shadow-glass: 0 6px 16px rgba(0,0,0,0.12), 0 24px 80px rgba(0,0,0,0.16);
+  --shadow-floating-tab: 0 4px 16px rgba(0,0,0,0.08);
+
+  /* --- Material recipes (backdrop-filter approximations) --- */
+  --material-ultrathin-blur: blur(20px) saturate(1.4); /* @kind other */
+  --material-thin-blur: blur(30px) saturate(1.6); /* @kind other */
+  --material-regular-blur: blur(40px) saturate(1.8); /* @kind other */
+  --material-thick-blur: blur(50px) saturate(1.9); /* @kind other */
+  --material-chrome-blur: blur(30px) saturate(1.4); /* @kind other */
+
+  --material-ultrathin-fill: rgba(255,255,255,0.44);
+  --material-thin-fill: rgba(255,255,255,0.58);
+  --material-regular-fill: rgba(255,255,255,0.72);
+  --material-thick-fill: rgba(255,255,255,0.84);
+
+  /* Liquid Glass control surface (tinted, semi-transparent capsule) */
+  --glass-fill: rgba(255,255,255,0.18);
+  --glass-stroke: rgba(255,255,255,0.40);
+  --glass-blur: blur(16px) saturate(1.6); /* @kind other */
+
+  /* Hairline border weight */
+  --hairline: 0.5px;
+
+  /* Motion (iOS spring-ish easing) */
+  --ease-standard: cubic-bezier(0.32, 0.72, 0, 1); /* @kind other */
+  --ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1); /* @kind other */
+  --dur-fast: 0.18s; /* @kind other */
+  --dur-medium: 0.32s; /* @kind other */
+}
+
+:root[data-theme="dark"], .dark {
+  --material-ultrathin-fill: rgba(40,40,42,0.50);
+  --material-thin-fill: rgba(40,40,42,0.62);
+  --material-regular-fill: rgba(30,30,32,0.74);
+  --material-thick-fill: rgba(20,20,22,0.86);
+  --glass-fill: rgba(120,120,128,0.22);
+  --glass-stroke: rgba(255,255,255,0.16);
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.5);
+}

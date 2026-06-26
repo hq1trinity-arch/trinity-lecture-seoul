@@ -1,0 +1,43 @@
+/* ============================================================
+   TRINITY ONE — Brand layer
+   TRINITY ONE is a private-strategy brand ("The Only Strategy for
+   the 0.1%"). Its surface is built on the iOS / iPadOS 26 system
+   palette (see fig-tokens.css), but the system accent is replaced
+   by the TRINITY brown, and a warm "private-bank" neutral set sits
+   alongside the cool iOS grays for marketing surfaces.
+   ============================================================ */
+
+:root {
+  /* --- Brand browns (from the TRINITY ONE triquetra mark) --- */
+  --trinity-brown: rgb(122, 92, 58);        /* #7A5C3A — logo / wordmark */
+  --trinity-brown-deep: rgb(90, 66, 40);    /* #5A4228 — pressed / ink   */
+  --trinity-brown-soft: rgb(172, 127, 94);  /* #AC7F5E — iOS accent brown */
+  --trinity-brown-tint: rgb(225, 211, 196); /* #E1D3C4 — fills / chips    */
+  --trinity-brown-wash: rgb(246, 241, 235); /* #F6F1EB — page wash        */
+
+  /* Warm "paper" neutrals for premium marketing surfaces */
+  --trinity-ink: rgb(38, 31, 24);           /* near-black warm */
+  --trinity-paper: rgb(250, 247, 243);      /* warm off-white  */
+  --trinity-line: rgba(122, 92, 58, 0.18);  /* hairline on paper */
+
+  /* --- Brand accent override of the iOS system tint ---
+     Anything reading --tint gets TRINITY brown instead of iOS blue. */
+  --tint: var(--trinity-brown);
+  --tint-pressed: var(--trinity-brown-deep);
+  --tint-fill: rgba(122, 92, 58, 0.14);     /* tinted-button background */
+  --tint-on: rgb(255, 255, 255);            /* label on a filled tint   */
+
+  /* Brand typefaces */
+  --font-brand: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif-display: ui-serif, "Times New Roman", serif;
+}
+
+/* Dark theme keeps the brown legible by lifting it toward the soft tone */
+:root[data-theme="dark"], .dark {
+  --tint: var(--trinity-brown-soft);
+  --tint-pressed: rgb(149, 109, 81);
+  --tint-fill: rgba(172, 127, 94, 0.22);
+  --trinity-paper: rgb(20, 17, 14);
+  --trinity-ink: rgb(244, 240, 235);
+  --trinity-line: rgba(219, 166, 121, 0.18);
+}

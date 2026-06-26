@@ -1,0 +1,57 @@
+/* ============================================================
+   TRINITY ONE — Semantic aliases
+   Friendly names mapped onto the raw iOS variables (fig-tokens.css).
+   Components should reference THESE, not the raw --backgrounds-* etc.
+   ============================================================ */
+
+:root {
+  /* Surfaces */
+  --surface-page: var(--backgrounds-primary);
+  --surface-grouped: var(--backgrounds-grouped-primary);
+  --surface-card: var(--backgrounds-grouped-secondary);
+  --surface-raised: var(--backgrounds-secondary);
+  --surface-input: var(--miscellaneous-text-field-bg);
+
+  /* Text / labels */
+  --text-primary: var(--labels-primary);
+  --text-secondary: var(--labels-secondary);
+  --text-tertiary: var(--labels-tertiary);
+  --text-quaternary: var(--labels-quaternary);
+  --text-on-tint: var(--tint-on);
+
+  /* Fills (for unlabeled control backgrounds) */
+  --fill-1: var(--fills-primary);
+  --fill-2: var(--fills-secondary);
+  --fill-3: var(--fills-tertiary);
+  --fill-4: var(--fills-quaternary);
+
+  /* Lines */
+  --separator: var(--separators-non-opaque);
+  --separator-opaque: var(--separators-opaque);
+  --border-input: var(--miscellaneous-text-field-outline);
+
+  /* Status / semantic accents */
+  --color-positive: var(--accents-green);
+  --color-warning: var(--accents-orange);
+  --color-negative: var(--accents-red);
+  --color-info: var(--accents-blue);
+
+  /* System gray ramp passthrough */
+  --gray-1: var(--grays-gray);
+  --gray-2: var(--grays-gray-2);
+  --gray-3: var(--grays-gray-3);
+  --gray-4: var(--grays-gray-4);
+  --gray-5: var(--grays-gray-5);
+  --gray-6: var(--grays-gray-6);
+}
+
+/* Baseline document defaults so consuming pages inherit the brand */
+:root {
+  color-scheme: light dark;
+}
+body {
+  font-family: var(--font-system);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
